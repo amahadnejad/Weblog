@@ -25,7 +25,8 @@ class PostCreateView(generic.CreateView):
     success_url = reverse_lazy('post_list')
 
     def form_valid(self, form):
-        form.instance.author = self.request.user  # Set the author to the current user
+        # Set The Author To The Current User
+        form.instance.author = self.request.user
         return super().form_valid(form)
 
 
@@ -33,3 +34,9 @@ class PostUpdateView(generic.UpdateView):
     model = Post
     fields = ['title', 'description', ]
     template_name = "blog/post_update.html"
+
+
+class PostDeleteView(generic.DeleteView):
+    model = Post
+    template_name = "blog/post_delete.html"
+    success_url = reverse_lazy("post_list")
