@@ -3,12 +3,20 @@
 {% block page_title %}{{ post.title }}{% endblock page_title %}
 
 {% block content %}
-        <h1>{{ post.title }}</h1>
-        <h2>{{ post.author }}</h2>
-        <p>{{ post.description }}</p>
-        <h2>Comments</h2>
-        {% for comment in comments %}
-            <p>{{ comment.user }} : {{ comment.text }}</p>
-        {% endfor %}
+    <h1>{{ post.title }}</h1>
+    <h2>{{ post.author }}</h2>
+    <p>{{ post.description }}</p>
+    <hr>
+    <h2>Comments</h2>
+    {% for comment in comments %}
+        <p>{{ comment.user }} : {{ comment.text }}</p>
+    {% endfor %}
+    <hr>
+    <h2>Add Comment:</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <button type="submit">Enter</button>
+    </form>
 
-{% endblock content%}
+{% endblock content %}
