@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+
+{% block page_title %}{{ post.title }}{% endblock page_title %}
+
+{% block content %}
+        <h1>{{ post.title }}</h1>
+        <h2>{{ post.author }}</h2>
+        <p>{{ post.description }}</p>
+
+{% endblock content%}
