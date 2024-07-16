@@ -28,3 +28,8 @@ class PostCreateView(generic.CreateView):
         form.instance.author = self.request.user  # Set the author to the current user
         return super().form_valid(form)
 
+
+class PostUpdateView(generic.UpdateView):
+    model = Post
+    fields = ['title', 'description', ]
+    template_name = "blog/post_update.html"
