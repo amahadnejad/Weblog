@@ -32,14 +32,14 @@
         </div>
         {% if user.is_authenticated %}
             <div class="navbar-nav">
-                <a class="nav-link active  text-light text-decoration-none" href="{% url 'account_logout' %}">logout</a>
+                <a class="nav-link active  text-light text-decoration-none" href="{% url 'account_logout' %}">Logout</a>
                 <a class="nav-link active text-light">{{ user.username }}</a>
             </div>
         {% else %}
             <div class="navbar-nav">
-                <a href="{% url 'account_login' %}" class="nav-link active text-decoration-none  text-light">login</a>
+                <a href="{% url 'account_login' %}" class="nav-link active text-decoration-none  text-light">Login</a>
 
-                <a href="{% url 'account_signup' %}" class="nav-link active text-decoration-none  text-light">signup</a>
+                <a href="{% url 'account_signup' %}" class="nav-link active text-decoration-none  text-light">Signup</a>
             </div>
         {% endif %}
     </div>
