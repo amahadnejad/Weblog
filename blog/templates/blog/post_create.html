@@ -1,13 +1,24 @@
 {% extends '_base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block page_title %}New Post{% endblock page_title %}
 
 {% block content %}
-    <h1>New Post</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Create</button>
-    </form>
-
-{% endblock content%}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header" style="background-color: #00967d; color: white;">
+            <h1>New Post</h1>
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form|crispy }}
+                </div>
+                <button type="submit" class="btn mt-3" style="background-color: #00967d; color: white;">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
