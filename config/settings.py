@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     # Third-Party Apps
     'allauth',
     'allauth.account',
+    'crispy_forms',
+    'crispy_bootstrap4',
 
     # Local Apps
     'accounts.apps.AccountsConfig',
@@ -141,3 +143,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "accounts.CustomUser"
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
+
+# Crispy Forms Setting
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
