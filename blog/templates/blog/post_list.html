@@ -15,10 +15,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ post.title }}</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">by: {{ post.author }}</h6>
+                                    <h6 class="card-subtitle mb-2 text-muted"><small>by: {{ post.author }}</small></h6>
                                     <p class="card-text"><small>Posted on {{ post.datetime_created|date }}</small></p>
                                     <p class="card-text">{{ post.description|truncatewords:50 }}</p>
-                                    <a href="#" class="btn btn-primary">Read More</a>
+
+                                        <a href="#" class="btn text-light" style="background-color: #00967d;">Read More</a>
                                 </div>
                             </div>
                         </div>
