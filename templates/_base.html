@@ -19,15 +19,14 @@
             <img src="" alt="" height="30"
                  class="d-inline-block align-text-top">
         </a>
-        <a class="navbar-brand mx-3  text-light" href="">Weblog</a>
+        <a class="navbar-brand mx-3  text-light" href="{% url 'post_list' %}">Weblog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active  text-light" aria-current="page" href="">Home</a>
-                <a class="nav-link active  text-light" aria-current="page" href="">blog</a>
+                <a class="nav-link active  text-light" aria-current="page" href="{% url 'post_list' %}">Home</a>
                 <a class="nav-link active  text-light" href="">AboutUs</a>
             </div>
         </div>
