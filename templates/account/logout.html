@@ -2,25 +2,26 @@
 
 {% load crispy_forms_tags %}
 
-{% block page_title %}Login{% endblock page_title %}
+{% block page_title %}Logout{% endblock page_title %}
 
 {% block content %}
     <div class="container col-5 mt-5">
         <div class="card">
             <div class="card-header d-flex justify-content-center" style="background-color: #00967d; color: white;">
-                <h1>Login</h1>
+                <h1>Logout</h1>
             </div>
             <div class="card-body">
                 <form method="POST">
                     {% csrf_token %}
                     <div class="form-group">
-                        {{ form|crispy }}
+                        <p>Do You Want To Logout ?</p>
                     </div>
-                    <button type="submit" class="btn mt-3" style="background-color: #00967d; color: white;">Login
+                    <button type="submit" class="btn mt-3" style="background-color: #00967d; color: white;">Logout
                     </button>
                 </form>
             </div>
         </div>
     </div>
-    <br>
+    <br><br><br><br><br><br>
+
 {% endblock content %}
