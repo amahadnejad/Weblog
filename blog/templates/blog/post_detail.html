@@ -25,10 +25,17 @@
                         </div>
                     </div>
                     <center>
-                        <div class="col-md-4 mt-3 d-flex justify-items-center">
-                            <img src="https://via.placeholder.com/400x250" class="card-img" alt="Blog Post Image"
+                        {% if post.cover %}
+                            <div class="col-md-4 mt-3 d-flex justify-items-center">
+                            <img src="{{ post.cover.url }}" class="card-img" alt="Blog Post Image"
                                  width="400" height="250">
-                        </div>
+                        {% else %}
+                            <div class="col-md-4 mt-3 d-flex justify-items-center">
+                                <img src="https://via.placeholder.com/400x250" class="card-img" alt="Blog Post Image"
+                                     width="400" height="250">
+                            </div>
+                        {% endif %}
+
                     </center>
 
 
