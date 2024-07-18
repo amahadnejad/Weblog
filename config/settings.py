@@ -146,3 +146,7 @@ LOGOUT_REDIRECT_URL = "post_list"
 
 # Crispy Forms Setting
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Media Setting
+MEDIA_URL = "/media/"
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
