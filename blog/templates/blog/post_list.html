@@ -10,7 +10,13 @@
                     <div class="card mb-3">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="https://via.placeholder.com/400x250" class="card-img" alt="Blog Post Image">
+                                {% if post.cover %}
+                                    <img src="{{ post.cover.url }}" class="card-img" alt="Blog Post Image" width="400"
+                                         height="250">
+                                    {% else %}
+                                    <img src="https://via.placeholder.com/400x250" class="card-img" alt="Blog Post Image" width="400"
+                                         height="250">
+                                {% endif %}
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -19,7 +25,7 @@
                                     </a>
 
                                     <p class="card-subtitle mb-2 text-muted"><small>by: {{ post.author }}</small> |
-                                    <small>Posted on {{ post.datetime_created|date }}</small></p>
+                                        <small>Posted on {{ post.datetime_created|date }}</small></p>
                                     <p class="card-text">{{ post.description|truncatewords:50 }}</p>
 
                                     <a href="{{ post.get_absolute_url }}" class="btn text-light"
