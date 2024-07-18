@@ -30,6 +30,7 @@
             <div class="navbar-nav">
                 <a class="nav-link active  text-light" aria-current="page" href="{% url 'post_list' %}">Home</a>
                 <a class="nav-link active  text-light" href="">AboutUs</a>
+                <a class="nav-link active  text-light" href="{% url 'post_create' %}">New Post</a>
             </div>
         </div>
         {% if user.is_authenticated %}

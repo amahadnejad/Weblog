@@ -13,8 +13,9 @@
                                 {% if post.cover %}
                                     <img src="{{ post.cover.url }}" class="card-img" alt="Blog Post Image" width="400"
                                          height="250">
-                                    {% else %}
-                                    <img src="https://via.placeholder.com/400x250" class="card-img" alt="Blog Post Image" width="400"
+                                {% else %}
+                                    <img src="https://via.placeholder.com/400x250" class="card-img"
+                                         alt="Blog Post Image" width="400"
                                          height="250">
                                 {% endif %}
                             </div>
@@ -28,8 +29,10 @@
                                         <small>Posted on {{ post.datetime_created|date }}</small></p>
                                     <p class="card-text">{{ post.description|truncatewords:50 }}</p>
 
-                                    <a href="{{ post.get_absolute_url }}" class="btn text-light"
-                                       style="background-color: #00967d;">Read More</a>
+                                    <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
+                                        <a href="{{ post.get_absolute_url }}" class="btn text-light "
+                                           style="background-color: #00967d;">Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
