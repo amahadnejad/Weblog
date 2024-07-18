@@ -50,7 +50,7 @@ class PostCreateView(generic.CreateView):
 
 class PostUpdateView(generic.UpdateView):
     model = Post
-    fields = ['title', 'description', ]
+    fields = ['title', 'description']
     template_name = "blog/post_update.html"
 
 
@@ -58,3 +58,5 @@ class PostDeleteView(generic.DeleteView):
     model = Post
     template_name = "blog/post_delete.html"
     success_url = reverse_lazy("post_list")
+
+

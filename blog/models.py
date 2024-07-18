@@ -4,11 +4,16 @@ from django.urls import reverse
 
 
 class Post(models.Model):
+    STATUS_CHOICES = (
+        ('pub', 'Published'),
+        ('drf', 'Draft'),
+    )
+
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     title = models.CharField(max_length=250)
     description = models.TextField()
     cover = models.ImageField(upload_to='covers/', blank=True)
-    is_active = models.BooleanField(default=True)
+    status = models.CharField(choices=STATUS_CHOICES, max_length=3, default=STATUS_CHOICES[0][0])
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
