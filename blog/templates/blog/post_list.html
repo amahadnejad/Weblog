@@ -18,8 +18,8 @@
                                         <h5 class="card-title">{{ post.title }}</h5>
                                     </a>
 
-                                    <h6 class="card-subtitle mb-2 text-muted"><small>by: {{ post.author }}</small></h6>
-                                    <p class="card-text"><small>Posted on {{ post.datetime_created|date }}</small></p>
+                                    <p class="card-subtitle mb-2 text-muted"><small>by: {{ post.author }}</small> |
+                                    <small>Posted on {{ post.datetime_created|date }}</small></p>
                                     <p class="card-text">{{ post.description|truncatewords:50 }}</p>
 
                                     <a href="{{ post.get_absolute_url }}" class="btn text-light"
