@@ -1,14 +1,15 @@
 {% extends '_base.html' %}
 
+{% load i18n %}
 {% load crispy_forms_tags %}
 
-{% block page_title %}Login{% endblock page_title %}
+{% block page_title %}{% trans 'Login' %}{% endblock page_title %}
 
 {% block content %}
     <div class="container col-5 mt-5">
         <div class="card">
             <div class="card-header d-flex justify-content-center" style="background-color: #00967d; color: white;">
-                <h1>Login</h1>
+                <h1>{% trans 'Login' %}</h1>
             </div>
             <div class="card-body">
                 <form method="POST">
@@ -16,8 +17,7 @@
                     <div class="form-group">
                         {{ form|crispy }}
                     </div>
-                    <button type="submit" class="btn mt-3" style="background-color: #00967d; color: white;">Login
-                    </button>
+                    <button type="submit" class="btn mt-3" style="background-color: #00967d; color: white;">{% trans 'Login' %}</button>
                 </form>
             </div>
         </div>

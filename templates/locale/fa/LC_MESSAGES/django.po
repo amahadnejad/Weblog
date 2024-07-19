@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:30+0330\n"
-"PO-Revision-Date: 2024-07-19 15:31+0330\n"
+"POT-Creation-Date: 2024-07-19 15:34+0330\n"
+"PO-Revision-Date: 2024-07-19 15:35+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -35,11 +35,13 @@ msgstr "درباره ما"
 msgid "New Post"
 msgstr "پست جدید"
 
-#: .\_base.html:39
+#: .\_base.html:39 .\account\logout.html:6 .\account\logout.html:12
+#: .\account\logout.html:20
 msgid "Logout"
 msgstr "خروج"
 
-#: .\_base.html:44
+#: .\_base.html:44 .\account\login.html:6 .\account\login.html:12
+#: .\account\login.html:20
 msgid "Login"
 msgstr "ورود"
 
@@ -62,3 +64,7 @@ msgstr "درباره ما"
 #: .\_base.html:95
 msgid "Copyright"
 msgstr "کپی رایت"
+
+#: .\account\logout.html:18
+msgid "Do You Want To Logout?"
+msgstr "آیا می خواهید از حساب کاربری خود خارج شوید؟"
