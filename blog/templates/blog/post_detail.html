@@ -20,7 +20,8 @@
 
                         <div style="text-align: left;">
                             <p class="card-subtitle mb-2 text-light"
-                               style="display: inline-block; margin-left: 10px; margin-bottom: 0;">{{ post.author|capfirst }} |
+                               style="display: inline-block; margin-left: 10px; margin-bottom: 0;">{{ post.author|capfirst }}
+                                |
                                 {{ post.datetime_created|to_jalali:'%Y/%m/%d' }} </p>
                         </div>
                     </div>
@@ -81,6 +82,12 @@
                                     <div class="card-body">
                                         <p class="card-text text-muted">{{ comment.datetime_created|to_jalali:'%Y/%m/%d' }}
                                             | {{ comment.user|capfirst }}</p>
+                                        {% if comment.helpful %}
+                                            <p>helpful</p>
+                                        {% else %}
+                                            <p>unhelpful</p>
+
+                                        {% endif %}
                                         <p class="card-text">{{ comment.text }}</p>
 
                                     </div>
