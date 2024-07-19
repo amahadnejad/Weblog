@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block page_title %}{% trans 'aboutus' %}{% endblock page_title %}
+
+{% block content %}
+    <div class="container col-5 mt-5">
+        <div class="card">
+            <div class="card-header d-flex justify-content-center" style="background-color: #00967d; color: white;">
+                <h1>{% trans 'aboutus' %}</h1>
+            </div>
+            <div class="card-body">
+                <p>
+                    {{ about_us }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+{% endblock content %}
