@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
+{% load i18n %}
 
-{% block page_title %}Posts{% endblock page_title %}
+{% block page_title %}{% trans 'Blog' %}{% endblock page_title %}
 
 {% block content %}
     {% for post in posts %}
