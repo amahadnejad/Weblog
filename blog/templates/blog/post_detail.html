@@ -2,8 +2,9 @@
 
 {% load crispy_forms_tags %}
 {% load i18n %}
+{% load jalali_tags %}
 
-{% block page_title %}{{ post.title }}{% endblock page_title %}
+{% block page_title %}{{ post.title|capfirst }}{% endblock page_title %}
 
 {% block content %}
     <div class="container mt-5">
@@ -14,14 +15,13 @@
                     <div class="card-header"
                          style="background-color: #00967d; color: white; display: flex; justify-content: space-between; align-items: center;">
                         <div style="text-align: right;">
-                            <h2 class="card-title">{{ post.title }}</h2>
+                            <h2 class="card-title">{{ post.title|capfirst }}</h2>
                         </div>
 
                         <div style="text-align: left;">
                             <p class="card-subtitle mb-2 text-light"
-                               style="display: inline-block; margin-left: 10px; margin-bottom: 0;">{{ post.author|capfirst }}
-                                |
-                                {{ post.datetime_created|date }} </p>
+                               style="display: inline-block; margin-left: 10px; margin-bottom: 0;">{{ post.author|capfirst }} |
+                                {{ post.datetime_created|to_jalali:'%Y/%m/%d' }} </p>
                         </div>
                     </div>
                     <center>
@@ -79,7 +79,7 @@
                             {% for comment in comments %}
                                 <div class="card mb-3">
                                     <div class="card-body">
-                                        <p class="card-text text-muted">{{ comment.datetime_created|date }}
+                                        <p class="card-text text-muted">{{ comment.datetime_created|to_jalali:'%Y/%m/%d' }}
                                             | {{ comment.user|capfirst }}</p>
                                         <p class="card-text">{{ comment.text }}</p>
 
@@ -87,7 +87,7 @@
                                 </div>
                             {% endfor %}
                         {% else %}
-                            <p>{% trans 'Comments' %}</p>
+                            <p>{% trans 'No Comments Found!' %}</p>
                         {% endif %}
                     </div>
                 </div>

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:28+0330\n"
-"PO-Revision-Date: 2024-07-19 15:23+0330\n"
+"POT-Creation-Date: 2024-07-19 15:45+0330\n"
+"PO-Revision-Date: 2024-07-19 15:45+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -53,9 +53,14 @@ msgstr "شما نویسنده این پست هستید"
 msgid "Update"
 msgstr "بروزرسانی"
 
-#: .\templates\blog\post_detail.html:75 .\templates\blog\post_detail.html:90
+#: .\templates\blog\post_detail.html:75
 msgid "Comments"
 msgstr "نظرات"
+
+#: .\templates\blog\post_detail.html:90
+#| msgid "Comments"
+msgid "No Comments Found!"
+msgstr "نظری یافت نشد!"
 
 #: .\templates\blog\post_detail.html:98
 msgid "Add Comment"
@@ -73,18 +78,18 @@ msgstr "برای ارسال نظر باید احراز هویت کرده باش�
 msgid "Login"
 msgstr "ورود"
 
-#: .\templates\blog\post_list.html:4
+#: .\templates\blog\post_list.html:6
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: .\templates\blog\post_list.html:29
+#: .\templates\blog\post_list.html:31
 msgid "by"
 msgstr "توسط "
 
-#: .\templates\blog\post_list.html:30
+#: .\templates\blog\post_list.html:32
 msgid "Posted on"
 msgstr "تاریخ انتشار"
 
-#: .\templates\blog\post_list.html:35
+#: .\templates\blog\post_list.html:37
 msgid "Read More"
 msgstr "بیشتر بخوانید"
