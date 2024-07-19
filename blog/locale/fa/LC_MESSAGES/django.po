@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:14+0330\n"
-"PO-Revision-Date: 2024-07-19 15:14+0330\n"
+"POT-Creation-Date: 2024-07-19 15:17+0330\n"
+"PO-Revision-Date: 2024-07-19 15:17+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\templates\blog\post_delete.html:6 .\templates\blog\post_delete.html:12
+#: .\templates\blog\post_delete.html:20 .\templates\blog\post_detail.html:68
+msgid "Delete"
+msgstr "حذف"
+
+#: .\templates\blog\post_delete.html:12
+#| msgid "Posted on"
+msgid "Post"
+msgstr "پست"
+
+#: .\templates\blog\post_delete.html:18
+msgid "Are You Sure?"
+msgstr "آیا مطمئن هستید؟"
 
 #: .\templates\blog\post_detail.html:52
 msgid "Edit"
@@ -31,10 +45,6 @@ msgstr "شما نویسنده این پست هستید"
 #: .\templates\blog\post_update.html:12 .\templates\blog\post_update.html:20
 msgid "Update"
 msgstr "بروزرسانی"
-
-#: .\templates\blog\post_detail.html:68
-msgid "Delete"
-msgstr "حذف"
 
 #: .\templates\blog\post_detail.html:75 .\templates\blog\post_detail.html:90
 msgid "Comments"
