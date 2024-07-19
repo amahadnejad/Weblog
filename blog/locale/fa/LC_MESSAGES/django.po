@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:03+0330\n"
-"PO-Revision-Date: 2024-07-19 15:07+0330\n"
+"POT-Creation-Date: 2024-07-19 15:14+0330\n"
+"PO-Revision-Date: 2024-07-19 15:14+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\templates\blog\post_detail.html:52
+msgid "Edit"
+msgstr "ویرایش"
+
+#: .\templates\blog\post_detail.html:60
+msgid "You Are Author Of This Post"
+msgstr "شما نویسنده این پست هستید"
+
+#: .\templates\blog\post_detail.html:66 .\templates\blog\post_update.html:6
+#: .\templates\blog\post_update.html:12 .\templates\blog\post_update.html:20
+msgid "Update"
+msgstr "بروزرسانی"
+
+#: .\templates\blog\post_detail.html:68
+msgid "Delete"
+msgstr "حذف"
+
+#: .\templates\blog\post_detail.html:75 .\templates\blog\post_detail.html:90
+msgid "Comments"
+msgstr "نظرات"
+
+#: .\templates\blog\post_detail.html:98
+msgid "Add Comment"
+msgstr "ایجاد نظر"
+
+#: .\templates\blog\post_detail.html:105
+msgid "Submit Comment"
+msgstr "ثبت نظر"
+
+#: .\templates\blog\post_detail.html:110
+msgid "You Must Be Authenticated To Submit A Comment"
+msgstr "برای ارسال نظر باید احراز هویت کرده باشید"
+
+#: .\templates\blog\post_detail.html:111
+msgid "Login"
+msgstr "ورود"
 
 #: .\templates\blog\post_list.html:4
 msgid "Blog"
@@ -28,7 +65,7 @@ msgid "by"
 msgstr "توسط "
 
 #: .\templates\blog\post_list.html:30
-msgid "Posted on "
+msgid "Posted on"
 msgstr "تاریخ انتشار"
 
 #: .\templates\blog\post_list.html:35
