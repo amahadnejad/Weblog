@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:22+0330\n"
+"POT-Creation-Date: 2024-07-19 15:28+0330\n"
 "PO-Revision-Date: 2024-07-19 15:23+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,6 @@ msgstr ""
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: .\templates\blog\post_create.html:6 .\templates\blog\post_create.html:12
-#| msgid "Post"
 msgid "New Post"
 msgstr "پست جدید"
 

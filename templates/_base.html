@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!doctype html>
 <html lang="en">
@@ -21,28 +22,28 @@
             <img src="" alt="" height="30"
                  class="d-inline-block align-text-top">
         </a>
-        <a class="navbar-brand mx-3  text-light" href="{% url 'post_list' %}">Weblog</a>
+        <a class="navbar-brand mx-3  text-light" href="{% url 'post_list' %}">{% trans 'Weblog' %}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active  text-light" aria-current="page" href="{% url 'post_list' %}">Home</a>
-                <a class="nav-link active  text-light" href="">AboutUs</a>
-                <a class="nav-link active  text-light" href="{% url 'post_create' %}">New Post</a>
+                <a class="nav-link active  text-light" aria-current="page" href="{% url 'post_list' %}">{% trans 'Home' %}</a>
+                <a class="nav-link active  text-light" href="">{% trans 'AboutUs' %}</a>
+                <a class="nav-link active  text-light" href="{% url 'post_create' %}">{% trans 'New Post' %}</a>
             </div>
         </div>
         {% if user.is_authenticated %}
             <div class="navbar-nav">
-                <a class="nav-link active  text-light text-decoration-none" href="{% url 'account_logout' %}">Logout</a>
+                <a class="nav-link active  text-light text-decoration-none" href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
                 <a class="nav-link active text-light">{{ user.username }}</a>
             </div>
         {% else %}
             <div class="navbar-nav">
-                <a href="{% url 'account_login' %}" class="nav-link active text-decoration-none  text-light">Login</a>
+                <a href="{% url 'account_login' %}" class="nav-link active text-decoration-none  text-light">{% trans 'Login' %}</a>
 
-                <a href="{% url 'account_signup' %}" class="nav-link active text-decoration-none  text-light">Signup</a>
+                <a href="{% url 'account_signup' %}" class="nav-link active text-decoration-none  text-light">{% trans 'Signup' %}</a>
             </div>
         {% endif %}
     </div>
@@ -59,14 +60,14 @@
         <div class="row">
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
+                <h5 class="text-uppercase">{% trans 'Links' %}</h5>
 
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="{% url 'post_list' %}" class="text-white text-decoration-none">Blog</a>
+                        <a href="{% url 'post_list' %}" class="text-white text-decoration-none">{% trans 'Blog' %}</a>
                     </li>
                     <li>
-                        <a href="{% url 'post_create' %}" class="text-white  text-decoration-none">New Post</a>
+                        <a href="{% url 'post_create' %}" class="text-white  text-decoration-none">{% trans 'New Post' %}</a>
                     </li>
 
                 </ul>
@@ -75,7 +76,7 @@
 
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">About Us</h5>
+                <h5 class="text-uppercase">{% trans 'About Us' %}</h5>
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
@@ -91,7 +92,7 @@
 
     <!-- Copyright -->
     <div class="text-light text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        Copyright:
+        {% trans 'Copyright' %}:
         <a class="text-light text-decoration-none" href="https://github.com/amahadnezhad">amahadnezhad</a>
         | © 2024
     </div>
