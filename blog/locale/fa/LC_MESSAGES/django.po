@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:17+0330\n"
-"PO-Revision-Date: 2024-07-19 15:17+0330\n"
+"POT-Creation-Date: 2024-07-19 15:22+0330\n"
+"PO-Revision-Date: 2024-07-19 15:23+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,13 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
+#: .\templates\blog\post_create.html:6 .\templates\blog\post_create.html:12
+#| msgid "Post"
+msgid "New Post"
+msgstr "پست جدید"
+
+#: .\templates\blog\post_create.html:20
+msgid "Create"
+msgstr "ایجاد"
+
 #: .\templates\blog\post_delete.html:6 .\templates\blog\post_delete.html:12
 #: .\templates\blog\post_delete.html:20 .\templates\blog\post_detail.html:68
 msgid "Delete"
 msgstr "حذف"
 
 #: .\templates\blog\post_delete.html:12
-#| msgid "Posted on"
 msgid "Post"
 msgstr "پست"
 
