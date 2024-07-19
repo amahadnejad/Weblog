@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:34+0330\n"
+"POT-Creation-Date: 2024-07-19 15:36+0330\n"
 "PO-Revision-Date: 2024-07-19 15:35+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,8 @@ msgstr "خروج"
 msgid "Login"
 msgstr "ورود"
 
-#: .\_base.html:46
+#: .\_base.html:46 .\account\signup.html:6 .\account\signup.html:12
+#: .\account\signup.html:20
 msgid "Signup"
 msgstr "ثبت نام"
 
