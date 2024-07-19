@@ -157,9 +157,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "accounts.CustomUser"
 LOGIN_REDIRECT_URL = "post_list"
 LOGOUT_REDIRECT_URL = "post_list"
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# All-Auth Setting
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+ACCOUNT_UNIQE_EMAIL = True
+ACCOUNT_SESSION_REMEMBER = True
 
 # Crispy Forms Setting
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 # Media Setting
 MEDIA_URL = "/media/"
