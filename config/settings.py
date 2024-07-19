@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap4',
     'rosetta',
+    'jalali_date',
 
     # Local Apps
     'accounts.apps.AccountsConfig',
