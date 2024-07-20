@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 {% load i18n %}
 {% load jalali_tags %}
+{% load persian_translation_tags %}
 
 {% block page_title %}{{ post.title|capfirst }}{% endblock page_title %}
 
@@ -22,7 +23,7 @@
                             <p class="card-subtitle mb-2 text-light"
                                style="display: inline-block; margin-left: 10px; margin-bottom: 0;">{{ post.author|capfirst }}
                                 |
-                                {{ post.datetime_created|to_jalali:'%Y/%m/%d' }} </p>
+                                {{ post.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }} </p>
                         </div>
                     </div>
                     <center>
@@ -82,7 +83,7 @@
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between">
                                             <p class="card-text text-muted mb-1">{{ comment.user|capfirst }}
-                                                | {{ comment.datetime_created|to_jalali:'%Y/%m/%d' }}</p>
+                                                | {{ comment.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }}</p>
                                             {% if comment.helpful %}
                                                 <p class="text-success mb-1">Helpful</p>
                                             {% else %}

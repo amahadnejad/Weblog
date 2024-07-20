@@ -2,6 +2,7 @@
 
 {% load i18n %}
 {% load jalali_tags %}
+{% load persian_translation_tags %}
 
 {% block page_title %}{% trans 'Blog' %}{% endblock page_title %}
 
@@ -29,7 +30,7 @@
                                     </a>
 
                                     <p class="card-subtitle mb-2 text-muted"><small>{% trans 'by' %}: {{ post.author }}</small> |
-                                        <small>{% trans 'Posted on' %}: {{ post.datetime_created|to_jalali:'%Y/%m/%d'}}</small></p>
+                                        <small>{% trans 'Posted on' %}: {{ post.datetime_created|to_jalali:'%Y/%m/%d'|translate_number}}</small></p>
                                     <p class="card-text">{{ post.description|truncatewords:50 }}</p>
 
                                     <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
