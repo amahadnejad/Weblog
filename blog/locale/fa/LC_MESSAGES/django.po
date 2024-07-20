@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-20 16:15+0330\n"
-"PO-Revision-Date: 2024-07-20 16:22+0330\n"
+"POT-Creation-Date: 2024-07-20 16:34+0330\n"
+"PO-Revision-Date: 2024-07-20 16:36+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -84,7 +84,7 @@ msgid "Create"
 msgstr "ایجاد"
 
 #: .\templates\blog\post_delete.html:6 .\templates\blog\post_delete.html:12
-#: .\templates\blog\post_delete.html:20 .\templates\blog\post_detail.html:69
+#: .\templates\blog\post_delete.html:20 .\templates\blog\post_detail.html:70
 msgid "Delete"
 msgstr "حذف"
 
@@ -100,32 +100,32 @@ msgstr "ویرایش"
 msgid "You Are Author Of This Post"
 msgstr "شما نویسنده این پست هستید"
 
-#: .\templates\blog\post_detail.html:67 .\templates\blog\post_update.html:6
+#: .\templates\blog\post_detail.html:68 .\templates\blog\post_update.html:6
 #: .\templates\blog\post_update.html:12 .\templates\blog\post_update.html:20
 msgid "Update"
 msgstr "بروزرسانی"
 
-#: .\templates\blog\post_detail.html:76
+#: .\templates\blog\post_detail.html:78
 msgid "Comments"
 msgstr "نظرات"
 
-#: .\templates\blog\post_detail.html:97
+#: .\templates\blog\post_detail.html:100
 msgid "No Comments Found!"
 msgstr "نظری یافت نشد!"
 
-#: .\templates\blog\post_detail.html:111
+#: .\templates\blog\post_detail.html:110
 msgid "Add Comment"
 msgstr "ایجاد نظر"
 
-#: .\templates\blog\post_detail.html:118
+#: .\templates\blog\post_detail.html:117
 msgid "Submit Comment"
 msgstr "ثبت نظر"
 
-#: .\templates\blog\post_detail.html:123
+#: .\templates\blog\post_detail.html:122
 msgid "You Must Be Authenticated To Submit A Comment"
 msgstr "برای ارسال نظر باید احراز هویت کرده باشید"
 
-#: .\templates\blog\post_detail.html:124
+#: .\templates\blog\post_detail.html:123
 msgid "Login"
 msgstr "ورود"
 
@@ -144,3 +144,15 @@ msgstr "تاریخ انتشار"
 #: .\templates\blog\post_list.html:37
 msgid "Read More"
 msgstr "بیشتر بخوانید"
+
+#: .\views.py:42
+msgid "Post Has Successfully Created"
+msgstr "پست با موفقیت ساخته شد."
+
+#: .\views.py:58
+msgid "Post Has Successfully Updated"
+msgstr "پست با موفقیت بروزرسانی شد."
+
+#: .\views.py:69
+msgid "Post Has Successfully Deleted"
+msgstr "پست با موفقیت حذف شد."

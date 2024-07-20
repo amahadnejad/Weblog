@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.utils.translation import gettext_lazy as _
 
 from .models import Post
 from .forms import PostForm, CommentForm
@@ -12,11 +13,6 @@ class PostListView(generic.ListView):
     template_name = "blog/post_list.html"
     context_object_name = "posts"
 
-
-# class PostDetailView(generic.DetailView):
-#     model = Post
-#     template_name = "blog/post_detail.html"
-#     context_object_name = 'post'
 
 def post_detail_view(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -37,15 +33,11 @@ def post_detail_view(request, pk):
                                                              'comment_form': comment_form, })
 
 
-class PostCreateView(LoginRequiredMixin, UserPassesTestMixin, generic.CreateView):
+class PostCreateView(LoginRequiredMixin, generic.CreateView):
     model = Post
     form_class = PostForm
-    template_name = "blog/post_create.html"
+    template_name = 'blog/post_create.html'
     success_url = reverse_lazy('post_list')
-
-    def test_func(self):
-        obj = self.get_object()
-        return obj.author == self.request.user
 
     def form_valid(self, form):
         # Set The Author To The Current User
@@ -71,5 +63,4 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView
     def test_func(self):
         obj = self.get_object()
         return obj.author == self.request.user
-
 
