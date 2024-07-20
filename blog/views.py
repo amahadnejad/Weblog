@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 from .models import Post
 from .forms import PostForm, CommentForm
@@ -36,11 +37,15 @@ def post_detail_view(request, pk):
                                                              'comment_form': comment_form, })
 
 
-class PostCreateView(generic.CreateView):
+class PostCreateView(LoginRequiredMixin, UserPassesTestMixin, generic.CreateView):
     model = Post
     form_class = PostForm
     template_name = "blog/post_create.html"
     success_url = reverse_lazy('post_list')
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
 
     def form_valid(self, form):
         # Set The Author To The Current User
@@ -48,15 +53,23 @@ class PostCreateView(generic.CreateView):
         return super().form_valid(form)
 
 
-class PostUpdateView(generic.UpdateView):
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
     model = Post
     fields = ['title', 'description']
     template_name = "blog/post_update.html"
 
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
 
-class PostDeleteView(generic.DeleteView):
+
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     model = Post
     template_name = "blog/post_delete.html"
     success_url = reverse_lazy("post_list")
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
 
 

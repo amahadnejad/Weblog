@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-20 16:15+0330\n"
-"PO-Revision-Date: 2024-07-20 16:17+0330\n"
+"PO-Revision-Date: 2024-07-20 16:22+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -29,7 +29,7 @@ msgstr "پیش نویس"
 
 #: .\models.py:13
 msgid "Author"
-msgstr "نویسنذه"
+msgstr "نویسنده"
 
 #: .\models.py:14
 msgid "Title"
