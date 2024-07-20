@@ -1,4 +1,9 @@
+@font-face {
+  font-family: 'Far Nazanin';
+  src: url('../fonts/Far_Nazanin.ttf') format('truetype');
+}
+
 body {
-  font-family: "../fonts/Far_TrafcBd.ttf";
-  font-size: 18px;
+  font-family: 'Far Nazanin', sans-serif;
+  font-size: 20px;
 }
