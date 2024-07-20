@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:36+0330\n"
-"PO-Revision-Date: 2024-07-19 15:35+0330\n"
-"Last-Translator:   <>\n"
+"POT-Creation-Date: 2024-07-20 19:12+0330\n"
+"PO-Revision-Date: 2024-07-20 19:15+0330\n"
+"Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "خانه"
 msgid "AboutUs"
 msgstr "درباره ما"
 
-#: .\_base.html:34 .\_base.html:70
+#: .\_base.html:34 .\_base.html:77
 msgid "New Post"
 msgstr "پست جدید"
 
@@ -50,21 +50,55 @@ msgstr "ورود"
 msgid "Signup"
 msgstr "ثبت نام"
 
-#: .\_base.html:63
+#: .\_base.html:70
 msgid "Links"
 msgstr "پیوند ها"
 
-#: .\_base.html:67
+#: .\_base.html:74
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: .\_base.html:79
+#: .\_base.html:86
 msgid "About Us"
 msgstr "درباره ما"
 
-#: .\_base.html:95
+#: .\_base.html:102
 msgid "Copyright"
 msgstr "کپی رایت"
+
+#: .\account\email_confirm.html:6 .\account\email_confirm.html:17
+msgid "Confirm Your Email Address"
+msgstr "آدرس ایمیل خود را تایید کنید"
+
+#: .\account\email_confirm.html:12
+msgid "Confirm E-mail Address"
+msgstr "آدرس ایمیل خود را تایید کنید"
+
+#: .\account\email_confirm.html:21
+#, python-format
+msgid ""
+"Please confirm that\n"
+"                                <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail address for user\n"
+"                                %(user_display)s."
+msgstr ""
+"لطفا آن را تایید کنید\n"
+"<a href=\"mailto:%(email)s\">%(email)s</a> یک آدرس ایمیل برای کاربر است\n"
+"%(user_display)s."
+
+#: .\account\email_confirm.html:27
+msgid "Confirm"
+msgstr "تایید"
+
+#: .\account\email_confirm.html:34
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please\n"
+"                                <a href=\"%(email_url)s\">issue a new e-mail confirmation request</a>\n"
+"                                ."
+msgstr ""
+"این پیوند تأیید ایمیل منقضی شده یا نامعتبر است. لطفا\n"
+"<a href=\"%(email_url)s\">یک درخواست تأیید ایمیل جدید صادر کنید</a>\n"
+"."
 
 #: .\account\logout.html:18
 msgid "Do You Want To Logout?"

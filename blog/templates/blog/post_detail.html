@@ -36,12 +36,9 @@
                                      width="400" height="250">
                             </div>
                         {% endif %}
-
                     </center>
-
-
                     <div class="card-body mt-3">
-                        <p class="card-text">{{ post.description }}</p>
+                        <p class="card-text">{{ post.description|linebreaksbr }}</p>
                     </div>
                 </div>
                 {% if post.author == user %}
