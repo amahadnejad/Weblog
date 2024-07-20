@@ -30,21 +30,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active  text-light" aria-current="page" href="{% url 'post_list' %}">{% trans 'Home' %}</a>
+                <a class="nav-link active  text-light" aria-current="page"
+                   href="{% url 'post_list' %}">{% trans 'Home' %}</a>
                 <a class="nav-link active  text-light" href="{% url 'aboutus' %}">{% trans 'AboutUs' %}</a>
                 <a class="nav-link active  text-light" href="{% url 'post_create' %}">{% trans 'New Post' %}</a>
             </div>
         </div>
         {% if user.is_authenticated %}
             <div class="navbar-nav">
-                <a class="nav-link active  text-light text-decoration-none" href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
-                <a class="nav-link active text-light">{{ user.username }}</a>
+                <a class="nav-link active text-light">{{ user.username|capfirst }}</a>
+                <a class="nav-link active  text-light text-decoration-none"
+                   href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
+
             </div>
         {% else %}
             <div class="navbar-nav">
-                <a href="{% url 'account_login' %}" class="nav-link active text-decoration-none  text-light">{% trans 'Login' %}</a>
+                <a href="{% url 'account_login' %}"
+                   class="nav-link active text-decoration-none  text-light">{% trans 'Login' %}</a>
 
-                <a href="{% url 'account_signup' %}" class="nav-link active text-decoration-none  text-light">{% trans 'Signup' %}</a>
+                <a href="{% url 'account_signup' %}"
+                   class="nav-link active text-decoration-none  text-light">{% trans 'Signup' %}</a>
             </div>
         {% endif %}
     </div>
@@ -67,15 +72,16 @@
         <!--Grid row-->
         <div class="row">
             <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 justify-content-center">
                 <h5 class="text-uppercase">{% trans 'Links' %}</h5>
-
+                <hr>
                 <ul class="list-unstyled mb-0">
                     <li>
                         <a href="{% url 'post_list' %}" class="text-white text-decoration-none">{% trans 'Blog' %}</a>
                     </li>
                     <li>
-                        <a href="{% url 'post_create' %}" class="text-white  text-decoration-none">{% trans 'New Post' %}</a>
+                        <a href="{% url 'post_create' %}"
+                           class="text-white  text-decoration-none">{% trans 'New Post' %}</a>
                     </li>
 
                 </ul>
@@ -83,13 +89,11 @@
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 justify-content-center">
                 <h5 class="text-uppercase">{% trans 'About Us' %}</h5>
-
+                <hr>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                    voluptatem veniam, est atque cumque eum delectus sint!
+                    ما یک تیم متشکل از علاقه‌مندان به فناوری و نوآوری هستیم که با هدف ارائه‌ی بهترین خدمات و محصولات دیجیتالی به شما عزیزان، فعالیت می‌کنیم.
                 </p>
             </div>
             <!--Grid column-->

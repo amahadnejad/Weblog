@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-20 16:34+0330\n"
-"PO-Revision-Date: 2024-07-20 16:36+0330\n"
+"POT-Creation-Date: 2024-07-21 00:57+0330\n"
+"PO-Revision-Date: 2024-07-21 00:58+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -84,7 +84,7 @@ msgid "Create"
 msgstr "ایجاد"
 
 #: .\templates\blog\post_delete.html:6 .\templates\blog\post_delete.html:12
-#: .\templates\blog\post_delete.html:20 .\templates\blog\post_detail.html:70
+#: .\templates\blog\post_delete.html:20 .\templates\blog\post_detail.html:68
 msgid "Delete"
 msgstr "حذف"
 
@@ -92,67 +92,72 @@ msgstr "حذف"
 msgid "Are You Sure?"
 msgstr "آیا مطمئن هستید؟"
 
-#: .\templates\blog\post_detail.html:53
+#: .\templates\blog\post_detail.html:51
 msgid "Edit"
 msgstr "ویرایش"
 
-#: .\templates\blog\post_detail.html:61
+#: .\templates\blog\post_detail.html:59
 msgid "You Are Author Of This Post"
 msgstr "شما نویسنده این پست هستید"
 
-#: .\templates\blog\post_detail.html:68 .\templates\blog\post_update.html:6
+#: .\templates\blog\post_detail.html:66 .\templates\blog\post_update.html:6
 #: .\templates\blog\post_update.html:12 .\templates\blog\post_update.html:20
 msgid "Update"
 msgstr "بروزرسانی"
 
-#: .\templates\blog\post_detail.html:78
+#: .\templates\blog\post_detail.html:76
 msgid "Comments"
 msgstr "نظرات"
 
-#: .\templates\blog\post_detail.html:100
+#: .\templates\blog\post_detail.html:110
 msgid "No Comments Found!"
 msgstr "نظری یافت نشد!"
 
-#: .\templates\blog\post_detail.html:110
+#: .\templates\blog\post_detail.html:120
 msgid "Add Comment"
 msgstr "ایجاد نظر"
 
-#: .\templates\blog\post_detail.html:117
+#: .\templates\blog\post_detail.html:127
 msgid "Submit Comment"
 msgstr "ثبت نظر"
 
-#: .\templates\blog\post_detail.html:122
+#: .\templates\blog\post_detail.html:132
 msgid "You Must Be Authenticated To Submit A Comment"
 msgstr "برای ارسال نظر باید احراز هویت کرده باشید"
 
-#: .\templates\blog\post_detail.html:123
+#: .\templates\blog\post_detail.html:133
 msgid "Login"
 msgstr "ورود"
 
-#: .\templates\blog\post_list.html:6
+#: .\templates\blog\post_list.html:7
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: .\templates\blog\post_list.html:31
+#: .\templates\blog\post_list.html:33
 msgid "by"
 msgstr "توسط "
 
-#: .\templates\blog\post_list.html:32
+#: .\templates\blog\post_list.html:34
 msgid "Posted on"
 msgstr "تاریخ انتشار"
 
-#: .\templates\blog\post_list.html:37
+#: .\templates\blog\post_list.html:40
 msgid "Read More"
 msgstr "بیشتر بخوانید"
 
-#: .\views.py:42
-msgid "Post Has Successfully Created"
-msgstr "پست با موفقیت ساخته شد."
+#: .\templates\blog\post_list.html:57
+msgid "Previous"
+msgstr "قبلی"
 
-#: .\views.py:58
-msgid "Post Has Successfully Updated"
-msgstr "پست با موفقیت بروزرسانی شد."
+#: .\templates\blog\post_list.html:63
+msgid "Next"
+msgstr "بعدی"
 
-#: .\views.py:69
-msgid "Post Has Successfully Deleted"
-msgstr "پست با موفقیت حذف شد."
+#~ msgid "Post Has Successfully Created"
+#~ msgstr "پست با موفقیت ساخته شد."
+
+#~ msgid "Post Has Successfully Updated"
+#~ msgstr "پست با موفقیت بروزرسانی شد."
+
+#~ msgid "Post Has Successfully Deleted"
+#~ msgstr "پست با موفقیت حذف شد."
