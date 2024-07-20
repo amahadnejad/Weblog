@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 15:45+0330\n"
-"PO-Revision-Date: 2024-07-19 15:45+0330\n"
-"Last-Translator:   <>\n"
+"POT-Creation-Date: 2024-07-20 16:15+0330\n"
+"PO-Revision-Date: 2024-07-20 16:17+0330\n"
+"Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\models.py:9
+msgid "Published"
+msgstr "منتشرشده"
+
+#: .\models.py:10
+msgid "Draft"
+msgstr "پیش نویس"
+
+#: .\models.py:13
+msgid "Author"
+msgstr "نویسنذه"
+
+#: .\models.py:14
+msgid "Title"
+msgstr "عنوان"
+
+#: .\models.py:15
+msgid "Description"
+msgstr "متن"
+
+#: .\models.py:16
+msgid "Cover"
+msgstr "عکس"
+
+#: .\models.py:18
+msgid "Status"
+msgstr "وضعیت"
+
+#: .\models.py:19 .\models.py:35
+msgid "DateTimeCreated"
+msgstr "تاریخ ایجاد"
+
+#: .\models.py:20 .\models.py:36
+msgid "DateTimeModified"
+msgstr "تاریخ بروزرسانی"
+
+#: .\models.py:30
+msgid "User"
+msgstr "کاربر"
+
+#: .\models.py:31 .\templates\blog\post_delete.html:12
+msgid "Post"
+msgstr "پست"
+
+#: .\models.py:32
+msgid "Text"
+msgstr "متن"
+
+#: .\models.py:33
+msgid "Post Was helpful?"
+msgstr "آیا پست مفید بود؟"
+
+#: .\models.py:34
+msgid "Is_active"
+msgstr "فعال"
 
 #: .\templates\blog\post_create.html:6 .\templates\blog\post_create.html:12
 msgid "New Post"
@@ -28,53 +84,48 @@ msgid "Create"
 msgstr "ایجاد"
 
 #: .\templates\blog\post_delete.html:6 .\templates\blog\post_delete.html:12
-#: .\templates\blog\post_delete.html:20 .\templates\blog\post_detail.html:68
+#: .\templates\blog\post_delete.html:20 .\templates\blog\post_detail.html:69
 msgid "Delete"
 msgstr "حذف"
-
-#: .\templates\blog\post_delete.html:12
-msgid "Post"
-msgstr "پست"
 
 #: .\templates\blog\post_delete.html:18
 msgid "Are You Sure?"
 msgstr "آیا مطمئن هستید؟"
 
-#: .\templates\blog\post_detail.html:52
+#: .\templates\blog\post_detail.html:53
 msgid "Edit"
 msgstr "ویرایش"
 
-#: .\templates\blog\post_detail.html:60
+#: .\templates\blog\post_detail.html:61
 msgid "You Are Author Of This Post"
 msgstr "شما نویسنده این پست هستید"
 
-#: .\templates\blog\post_detail.html:66 .\templates\blog\post_update.html:6
+#: .\templates\blog\post_detail.html:67 .\templates\blog\post_update.html:6
 #: .\templates\blog\post_update.html:12 .\templates\blog\post_update.html:20
 msgid "Update"
 msgstr "بروزرسانی"
 
-#: .\templates\blog\post_detail.html:75
+#: .\templates\blog\post_detail.html:76
 msgid "Comments"
 msgstr "نظرات"
 
-#: .\templates\blog\post_detail.html:90
-#| msgid "Comments"
+#: .\templates\blog\post_detail.html:97
 msgid "No Comments Found!"
 msgstr "نظری یافت نشد!"
 
-#: .\templates\blog\post_detail.html:98
+#: .\templates\blog\post_detail.html:111
 msgid "Add Comment"
 msgstr "ایجاد نظر"
 
-#: .\templates\blog\post_detail.html:105
+#: .\templates\blog\post_detail.html:118
 msgid "Submit Comment"
 msgstr "ثبت نظر"
 
-#: .\templates\blog\post_detail.html:110
+#: .\templates\blog\post_detail.html:123
 msgid "You Must Be Authenticated To Submit A Comment"
 msgstr "برای ارسال نظر باید احراز هویت کرده باشید"
 
-#: .\templates\blog\post_detail.html:111
+#: .\templates\blog\post_detail.html:124
 msgid "Login"
 msgstr "ورود"
 
