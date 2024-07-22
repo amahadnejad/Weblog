@@ -12,7 +12,7 @@
             <h1>{% trans 'New Post' %}</h1>
         </div>
         <div class="card-body" style="background-color: #f5f5f5;">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
                     {{ form|crispy }}

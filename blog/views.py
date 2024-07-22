@@ -10,6 +10,7 @@ from .forms import PostForm, CommentForm
 
 class PostListView(generic.ListView):
     model = Post
+    ordering = ['-datetime_created']
     paginate_by = 3
     template_name = "blog/post_list.html"
     context_object_name = "posts"
