@@ -7,62 +7,69 @@
 {% block page_title %}{% trans 'Blog' %}{% endblock page_title %}
 
 {% block content %}
-    {% for post in posts %}
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                {% if post.cover %}
-                                    <img src="{{ post.cover.url }}" class="card-img" alt="Blog Post Image" width="400"
-                                         height="250">
-                                {% else %}
-                                    <img src="https://via.placeholder.com/400x250" class="card-img"
-                                         alt="Blog Post Image" width="400"
-                                         height="250">
-                                {% endif %}
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <a href="{{ post.get_absolute_url }}" class="text-decoration-none text-black">
-                                        <h4 class="card-title"><b>{{ post.title }}</b></h4>
-                                    </a>
-
-                                    <p class="card-subtitle mb-2 text-muted">
-                                        <small>{% trans 'by' %}: {{ post.author|capfirst }}</small> |
-                                        <small>{% trans 'Posted on' %}: {{ post.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }}</small>
-                                    </p>
-                                    <p class="card-text">{{ post.description|truncatewords:50 }}</p>
-
-                                    <div class="position-absolute bottom-0 start-0 mb-3 ms-3">
-                                        <a href="{{ post.get_absolute_url }}" class="btn text-light "
-                                           style="background-color: #00967d;">{% trans 'Read More' %}</a>
-                                    </div>
-                                </div>
+    <div class="container mt-3">
+        {% if posts %}
+            {% for post in posts %}
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            {% if post.cover %}
+                                <img src="{{ post.cover.url }}" class="card-img" alt="Blog Post Image"
+                                     width="400" height="250">
+                            {% else %}
+                                <img src="https://placehold.co/400x250" class="card-img" alt="Blog Post Image"
+                                     style="object-fit: cover;">
+                            {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">
+                                    <h4 class="card-title"><b>{{ post.title }}</b></h4>
+                                </a>
+                                <p class="card-subtitle mb-2 text-muted">
+                                    <small>{% trans 'by' %}: {{ post.author|capfirst }}</small> |
+                                    <small>{% trans 'Posted on' %}: {{ post.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }}</small>
+                                </p>
+                                <p class="card-text">{{ post.description|truncatewords:50 }}</p>
+                                <a href="{{ post.get_absolute_url }}" class="btn text-light"
+                                   style="background-color: #00967d;">{% trans 'Read More' %}</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-    {% endfor %}
+            {% endfor %}
+        {% else %}
+            <div class="card mb-3">
+                <div class="row">
+                        <div class="text-center mt-5 mb-5">
+                            <h4>{% trans 'No Post Found!' %}</h4>
+                            <a href="{% url 'post_create' %}"
+                               class="btn btn-primary mt-2">{% trans 'Create New Post' %}</a>
+                        </div>
+                    </div>
+                </div>
+            <br><br><br><br><br>
+        {% endif %}
+    </div>
 
     <!-- pagination -->
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center mt-3">
+    <nav aria-label="Page navigation example" class="mt-3">
+        <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-                <li class="page-item"><a class="page-link"
-                                         href="?page={{ page_obj.previous_page_number|translate_number }}">{% trans 'Previous' %}</a>
+                <li class="page-item">
+                    <a class="page-link"
+                       href="?page={{ page_obj.previous_page_number|translate_number }}">{% trans 'Previous' %}</a>
                 </li>
             {% endif %}
-            <li class="page-item"><a class="page-link" href="#">{{ page_obj.number|translate_number }}</a></li>
+            <li class="page-item disabled">
+                <span class="page-link">{{ page_obj.number|translate_number }}</span>
+            </li>
             {% if page_obj.has_next %}
-                <li class="page-item"><a class="page-link"
-                                         href="?page={{ page_obj.next_page_number|translate_number }}">{% trans 'Next' %}</a></li>
+                <li class="page-item">
+                    <a class="page-link"
+                       href="?page={{ page_obj.next_page_number|translate_number }}">{% trans 'Next' %}</a>
+                </li>
             {% endif %}
         </ul>
     </nav>
-    <br>
 {% endblock content %}

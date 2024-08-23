@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-21 00:57+0330\n"
-"PO-Revision-Date: 2024-07-21 00:58+0330\n"
+"POT-Creation-Date: 2024-08-23 13:45+0330\n"
+"PO-Revision-Date: 2024-08-23 13:47+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -133,23 +133,33 @@ msgstr "ورود"
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: .\templates\blog\post_list.html:33
+#: .\templates\blog\post_list.html:30
 msgid "by"
 msgstr "توسط "
 
-#: .\templates\blog\post_list.html:34
+#: .\templates\blog\post_list.html:31
 msgid "Posted on"
 msgstr "تاریخ انتشار"
 
-#: .\templates\blog\post_list.html:40
+#: .\templates\blog\post_list.html:35
 msgid "Read More"
 msgstr "بیشتر بخوانید"
 
-#: .\templates\blog\post_list.html:57
+#: .\templates\blog\post_list.html:45
+#| msgid "No Comments Found!"
+msgid "No Post Found!"
+msgstr "پستی یافت نشد!"
+
+#: .\templates\blog\post_list.html:47
+#| msgid "New Post"
+msgid "Create New Post"
+msgstr "ساخت پست جدید"
+
+#: .\templates\blog\post_list.html:61
 msgid "Previous"
 msgstr "قبلی"
 
-#: .\templates\blog\post_list.html:63
+#: .\templates\blog\post_list.html:70
 msgid "Next"
 msgstr "بعدی"
 
