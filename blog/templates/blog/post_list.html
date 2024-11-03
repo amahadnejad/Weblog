@@ -28,7 +28,7 @@
                                 </a>
                                 <p class="card-subtitle mb-2 text-muted">
                                     <small>{% trans 'by' %}: {{ post.author|capfirst }}</small> |
-                                    <small>{% trans 'Posted on' %}: {{ post.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }}</small>
+                                    <small>{% trans 'Posted on' %}: {{ post.datetime_created }}</small>
                                 </p>
                                 <p class="card-text">{{ post.description|truncatewords:50 }}</p>
                                 <a href="{{ post.get_absolute_url }}" class="btn text-light"
